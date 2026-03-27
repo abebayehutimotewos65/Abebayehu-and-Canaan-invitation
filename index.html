@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abebayehu & Canaan | Wedding Invitation</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Poppins',sans-serif;background:#0f0f0f;color:#fff;scroll-behavior:smooth}
+    section{padding:80px 20px;text-align:center}
+
+    /* INTRO */
+    .intro{position:fixed;inset:0;background:#000;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:9999}
+    .intro h1{font-family:'Great Vibes',cursive;font-size:3.8rem;margin-bottom:8px}
+    .intro p{margin-bottom:20px}
+    .intro button{padding:14px 34px;border:none;border-radius:30px;font-size:1rem;background:#c9a24d;color:#000;cursor:pointer}
+
+    /* HERO */
+    .hero{min-height:100vh;background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url('DSC00064.JPG') center/cover no-repeat;display:flex;flex-direction:column;align-items:center;justify-content:center}
+    .hero h1{font-family:'Great Vibes',cursive;font-size:4.4rem}
+    .hero p{font-size:1.2rem;margin-top:10px}
+
+    /* COUNTDOWN */
+    .countdown{display:flex;gap:14px;margin-top:30px}
+    .box{background:#fff;color:#000;border-radius:12px;padding:12px 18px;min-width:74px}
+
+    /* CARD */
+    .card{background:#fff;color:#000;border-radius:22px;max-width:820px;margin:auto;padding:38px}
+    h2{font-family:'Great Vibes',cursive;font-size:2.6rem;color:#c9a24d;margin-bottom:20px}
+
+    /* GALLERY */
+    .gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+    .gallery img{width:100%;border-radius:16px}
+
+    /* BUTTON */
+    .btn{display:inline-block;margin-top:22px;padding:14px 32px;border-radius:30px;background:#c9a24d;color:#000;font-weight:600;text-decoration:none}
+    .btn:hover{opacity:.9}
+
+    iframe{width:100%;height:340px;border-radius:18px;border:0}
+    footer{padding:30px;text-align:center;background:#000;color:#aaa}
+
+    /* ANIMATION */
+    .fade{opacity:0;transform:translateY(30px);transition:1s}
+    .show{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+
+<!-- INTRO -->
+<div class="intro" id="intro">
+  <h1>Abebayehu & Canaan</h1>
+  <p>You Are Invited to Our Wedding</p>
+  <button onclick="openInvite()">Open Invitation</button>
+</div>
+
+<!-- MUSIC -->
+<audio id="music" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- HERO -->
+<section class="hero">
+  <h1>Abebayehu & Canaan</h1>
+  <p>May 16, 2026 • 3:30 PM</p>
+  <div class="countdown">
+    <div class="box"><span id="d">0</span><br>Days</div>
+    <div class="box"><span id="h">0</span><br>Hours</div>
+    <div class="box"><span id="m">0</span><br>Minutes</div>
+    <div class="box"><span id="s">0</span><br>Seconds</div>
+  </div>
+</section>
+
+<!-- MESSAGE -->
+<section class="fade">
+  <div class="card">
+    <h2>With Great Joy</h2>
+    <p>Together with our families, we kindly invite you to share in the celebration of the wedding ceremony of <strong>Abebayehu</strong> and <strong>Canaan</strong>.</p>
+  </div>
+</section>
+
+<!-- SAVE THE DATE – FULL CALENDAR -->
+<section class="fade" style="
+  background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+             url('photo_2026-03-26_08-58-28.jpg') center/cover no-repeat;
+  padding:100px 20px;
+  border-radius:22px;
+">
+  <div class="card" style="background:rgba(255,255,255,0.92);">
+
+    <h2>Save the Date</h2>
+
+    <p style="font-style:italic; margin-bottom:25px;">
+      A day marked by love,<br>
+      promises, and the beginning of forever.
+    </p>
+
+    <h3 style="margin-bottom:10px; color:#555;">May 2026</h3>
+
+    <!-- CALENDAR GRID -->
+    <div style="
+      display:grid;
+      grid-template-columns:repeat(7,1fr);
+      gap:10px;
+      max-width:420px;
+      margin:0 auto;
+      text-align:center;
+      font-weight:500;
+    ">
+
+      <!-- DAYS -->
+      <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div>
+      <div>Thu</div><div>Fri</div><div>Sat</div>
+
+      <!-- EMPTY DAYS BEFORE MAY 1 -->
+      <div></div><div></div><div></div><div></div><div></div>
+
+      <!-- DATES -->
+      <div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div>
+      <div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div>
+      <div>14</div><div>15</div>
+
+      <!-- MAY 16 – CIRCLED IN LOVE -->
+      <div style="
+        background:#c9a24d;
+        color:#fff;
+        border-radius:50%;
+        width:42px;
+        height:42px;
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        font-weight:700;
+        margin:auto;
+        position:relative;
+      ">
+        16
+        <span style="
+          position:absolute;
+          width:54px;
+          height:54px;
+          border:2px solid #c9a24d;
+          border-radius:50%;
+          top:-6px;
+          left:-6px;
+        "></span>
+      </div>
+
+      <div>17</div><div>18</div><div>19</div><div>20</div>
+
+      <div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div>
+      <div>28</div><div>29</div><div>30</div><div>31</div>
+    </div>
+
+    <p style="margin-top:25px;">
+      <strong>Saturday • 3:30 PM</strong><br>
+      Rwanda Full Gospel Church<br>
+      Addis Ababa
+    </p>
+
+  </div>
+</section><!-- GALLERY -->
+<section class="fade">
+  <h2>Our Beautiful Moments</h2>
+  <div class="gallery">
+    <img src="photo_2026-03-26_08-57-26.jpg" />
+    <img src="photo_2026-03-26_08-58-28.jpg" />
+    <img src="photo_2026-03-26_08-59-27.jpg" />
+    <img src="photo_2026-03-26_09-01-48.jpg" />
+    <img src="photo_2026-03-26_08-59-19.jpg" />
+  </div>
+</section>
+
+<!-- GALLERY – MOMENTS WE CHERISH -->
+<section class="fade" style="
+  background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+             url('photo_2026-03-26_08-59-59.jpg') center/cover no-repeat;
+  padding:100px 20px;
+  border-radius:20px;
+">
+  <h2>Our Journey</h2>
+  <div class="gallery card">
+    <img src="photo_2026-03-26_09-00-07.jpg">
+    <img src="photo_2026-03-26_09-00-36.jpg">
+    <img src="photo_2026-03-26_08-58-13.jpg">
+    <img src="photo_2026-03-26_08-59-34.jpg">
+    <img src="photo_2026-03-26_08-59-59.jpg">
+    <img src="photo_2026-03-26_08-59-34.jpg">
+    <img src="photo_2026-03-26_08-59-47.jpg">
+    <img src="DSC00064.JPG">
+  </div>
+</section>
+
+
+<!-- LOCATION -->
+<section class="fade">
+  <h2>Wedding Location</h2>
+  <p><strong>Rwanda Full Gospel Church</strong><br>Addis Ababa</p>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3941.396690148442!2d38.751255!3d8.996863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x164b85a7bb9a4adf%3A0x5f0c4399f1fb943!2sRwanda%20Full%20Gospel%20Church!5e0!3m2!1sen!2set!4v1711180000000"
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <br><br>
+
+  <a class="btn"
+     href="https://www.google.com/maps/search/?api=1&query=Rwanda+Full+Gospel+Church+Addis+Ababa"
+     target="_blank">
+     Get Directions
+  </a>
+
+<!-- OUR STORY -->
+<section class="fade" style="
+  background:linear-gradient(rgba(0,0,0,.55), rgba(0,0,0,.55)),
+             url('photo_2026-03-26_08-59-59.jpg') center/cover no-repeat;
+  padding:100px 20px;
+  border-radius:20px;
+">
+  <div class="card">
+    <h2>Our Story</h2>
+    <p>
+      What began as a simple connection grew into a beautiful journey of love,
+      trust, and shared dreams. With faith, friendship, and commitment,
+      we are grateful to celebrate this special moment with the people we love.
+    </p>
+  </div>
+</section>
+
+    </div>
+  </div>
+</section></section><!-- RSVP -->
+<section class="fade">
+  <div class="card">
+    <h2>RSVP</h2>
+    <p>Please confirm your attendance with Abebayehu & Canaan</p>
+    <a class="btn" href="https://wa.me/251909951365?text=I%20will%20attend%20your%20wedding">RSVP via WhatsApp</a>
+  </div>
+</section>
+
+<footer>
+  <p>We sincerely look forward to celebrating this special day with you ❤️<br>Abebayehu & Canaan</p>
+</footer>
+
+<script>
+  const wedding = new Date('May 16, 2026 15:30:00').getTime();
+  setInterval(()=>{
+    const now=new Date().getTime(),diff=wedding-now;
+    d.innerText=Math.max(0,Math.floor(diff/86400000));
+    h.innerText=Math.max(0,Math.floor(diff/3600000)%24);
+    m.innerText=Math.max(0,Math.floor(diff/60000)%60);
+    s.innerText=Math.max(0,Math.floor(diff/1000)%60);
+  },1000);
+
+  function openInvite(){
+    document.getElementById('intro').style.display='none';
+    document.getElementById('music').play();
+  }
+
+  const obs=new IntersectionObserver(entries=>{
+    entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show')}})
+  });
+  document.querySelectorAll('.fade').forEach(el=>obs.observe(el));
+</script>
+
+</body>
+</html>
